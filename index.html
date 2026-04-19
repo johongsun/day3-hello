@@ -4,15 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI 코드 어시스턴스 교육 프로그램</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <nav class="top-nav">
+      <div class="nav-inner">
+        <strong class="brand">CodeAtelier AI</strong>
+        <a class="ghost-link" href="#program">커리큘럼 보기</a>
+      </div>
+    </nav>
+
     <main>
       <section id="hero">
-        <p class="eyebrow">40대 이상 성인을 위한 AI 코드 학습</p>
-        <h1>비전공자도 따라오는 맞춤형 코칭</h1>
-        <p>급하게 몰아붙이지 않고, 이해 속도에 맞춰 차분하게 실력을 쌓는 12주 프로그램입니다.</p>
-        <a class="cta-button" href="#apply">설명회 신청하기</a>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">40대 이상 성인을 위한 AI 코드 학습</p>
+            <h1>비전공자도 따라오는 맞춤형 코칭</h1>
+            <p>
+              급하게 몰아붙이지 않고, 이해 속도에 맞춰 차분하게 실력을 쌓는 12주 프로그램입니다.
+              라이브 수업과 녹화 복습으로 완주 가능성을 높입니다.
+            </p>
+            <a class="cta-button" href="#apply">설명회 신청하기</a>
+          </div>
+          <aside class="code-fragment" aria-label="학습 미리보기">
+            <p class="fragment-label">AI 학습 프롬프트 예시</p>
+            <pre><code>const studyPlan = {
+  level: 'beginner',
+  support: '1:1 coaching',
+  mode: ['live', 'recorded']
+};</code></pre>
+          </aside>
+        </div>
       </section>
 
       <section id="anxiety-relief">
@@ -26,7 +54,9 @@
 
       <section id="program">
         <h2>12주 프로그램 구성</h2>
-        <p>주 1회 라이브 수업, 과제 피드백, 복습 가이드로 실무형 학습 루틴을 만들도록 설계했습니다.</p>
+        <p>
+          주 1회 라이브 수업, 과제 피드백, 복습 가이드로 실무형 학습 루틴을 만들도록 설계했습니다.
+        </p>
         <a class="cta-button" href="#apply">설명회 신청하기</a>
       </section>
 
@@ -80,18 +110,32 @@
         <form id="apply-form" novalidate>
           <div>
             <label for="name">이름</label>
-            <input id="name" name="name" />
-            <p data-error-for="name"></p>
+            <input id="name" name="name" autocomplete="name" aria-describedby="name-error" required />
+            <p id="name-error" data-error-for="name"></p>
           </div>
           <div>
             <label for="phone">연락처</label>
-            <input id="phone" name="phone" />
-            <p data-error-for="phone"></p>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              aria-describedby="phone-error"
+              required
+            />
+            <p id="phone-error" data-error-for="phone"></p>
           </div>
           <div>
             <label for="email">이메일</label>
-            <input id="email" name="email" />
-            <p data-error-for="email"></p>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              aria-describedby="email-error"
+              required
+            />
+            <p id="email-error" data-error-for="email"></p>
           </div>
           <button type="submit">설명회 신청 제출하기</button>
           <button type="button" id="retry-submit" hidden>다시 시도하기</button>
