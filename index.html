@@ -1,2 +1,209 @@
-hello world 1
-hello world 2
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 코드 어시스턴스 교육 프로그램</title>
+    <style>
+      :root {
+        --bg: #f8f9fa;
+        --surface: #f3f4f5;
+        --card: #ffffff;
+        --text: #1b1f24;
+        --muted: #4a5561;
+        --primary: #1b4477;
+        --primary-2: #365b91;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", "Noto Sans KR", system-ui, sans-serif;
+        line-height: 1.7;
+      }
+
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 56px 20px 72px;
+      }
+
+      section {
+        padding: 42px 30px;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        background: var(--surface);
+      }
+
+      section:nth-child(odd) {
+        background: var(--card);
+      }
+
+      h1,
+      h2 {
+        line-height: 1.25;
+        margin: 0 0 14px;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 4vw, 2.9rem);
+        letter-spacing: -0.02em;
+      }
+
+      h2 {
+        font-size: clamp(1.3rem, 2.6vw, 1.85rem);
+      }
+
+      p,
+      ul,
+      ol {
+        margin: 0 0 14px;
+        color: var(--muted);
+      }
+
+      .eyebrow {
+        font-size: 0.88rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #466188;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 24px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+      input {
+        width: 100%;
+        min-height: 44px;
+        border: 0;
+        border-radius: 12px;
+        padding: 10px 12px;
+        background: #f7f8fa;
+      }
+
+      form > div {
+        margin-bottom: 14px;
+      }
+
+      button {
+        min-height: 46px;
+        border: 0;
+        border-radius: 10px;
+        padding: 0 18px;
+        font-weight: 600;
+        background: #e8edf3;
+        color: #223142;
+      }
+
+      [data-error-for],
+      #form-status {
+        min-height: 1.2em;
+        font-size: 0.95rem;
+        color: #556172;
+      }
+
+      @media (max-width: 700px) {
+        main {
+          padding: 36px 16px 56px;
+        }
+
+        section {
+          padding: 30px 20px;
+          margin-bottom: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="hero">
+        <p class="eyebrow">40대 이상 성인을 위한 AI 코드 학습</p>
+        <h1>비전공자도 따라오는 맞춤형 코칭</h1>
+        <p>급하게 몰아붙이지 않고, 이해 속도에 맞춰 차분하게 실력을 쌓는 12주 프로그램입니다.</p>
+        <a class="cta-button" href="#apply">설명회 신청하기</a>
+      </section>
+
+      <section id="anxiety-relief">
+        <h2>"내가 늦은 건 아닐까"라는 불안을 덜어드립니다</h2>
+        <ul>
+          <li>기초 개념부터 실습까지 단계별로 진행</li>
+          <li>라이브 Q&A로 막히는 지점을 바로 해결</li>
+          <li>복습 자료로 학습 리듬을 안정적으로 유지</li>
+        </ul>
+      </section>
+
+      <section id="program">
+        <h2>12주 프로그램 구성</h2>
+        <p>주 1회 라이브 수업, 과제 피드백, 복습 가이드로 실무형 학습 루틴을 만들도록 설계했습니다.</p>
+        <a class="cta-button" href="#apply">설명회 신청하기</a>
+      </section>
+
+      <section id="outcomes">
+        <h2>전/후 성과 사례</h2>
+      </section>
+
+      <section id="process">
+        <h2>신청 절차</h2>
+        <ol>
+          <li>설명회 신청 폼 작성</li>
+          <li>참여 일정 안내 수신</li>
+          <li>설명회 참석 후 과정 선택</li>
+        </ol>
+      </section>
+
+      <section id="faq">
+        <h2>자주 묻는 질문</h2>
+      </section>
+
+      <section id="apply">
+        <h2>설명회 신청</h2>
+        <form id="apply-form" novalidate>
+          <div>
+            <label for="name">이름</label>
+            <input id="name" name="name" />
+            <p data-error-for="name"></p>
+          </div>
+          <div>
+            <label for="phone">연락처</label>
+            <input id="phone" name="phone" />
+            <p data-error-for="phone"></p>
+          </div>
+          <div>
+            <label for="email">이메일</label>
+            <input id="email" name="email" />
+            <p data-error-for="email"></p>
+          </div>
+          <button type="submit">설명회 신청 제출하기</button>
+          <button type="button" id="retry-submit" hidden>다시 시도하기</button>
+          <p id="form-status" aria-live="polite"></p>
+        </form>
+        <a class="cta-button" href="#apply">설명회 신청하기</a>
+      </section>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
