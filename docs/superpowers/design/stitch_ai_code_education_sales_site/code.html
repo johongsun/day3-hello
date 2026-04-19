@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CodeAtelier AI - AI 코딩의 미래</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#d5e3ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#00566a",
+                    "on-primary-container": "#bcd4ff",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary-fixed": "#001f28",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#7b2600",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#47d6ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-dim": "#d9dadb",
+                    "on-tertiary-fixed": "#380d00",
+                    "outline-variant": "#c3c6d6",
+                    "outline": "#737685",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#3a5f94",
+                    "background": "#f8f9fa",
+                    "on-primary-fixed": "#001b3c",
+                    "primary-container": "#365b91",
+                    "tertiary-container": "#a33500",
+                    "secondary-fixed": "#b6ebff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#812800",
+                    "inverse-on-surface": "#f0f1f2",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-container": "#ffc6b2",
+                    "secondary-container": "#00d2ff",
+                    "secondary": "#00677f",
+                    "surface-bright": "#f8f9fa",
+                    "on-surface-variant": "#434654",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "on-background": "#191c1d",
+                    "surface-container-high": "#e7e8e9",
+                    "on-surface": "#191c1d",
+                    "on-secondary-fixed-variant": "#004e60",
+                    "error": "#ba1a1a",
+                    "primary": "#1b4477",
+                    "inverse-primary": "#a7c8ff",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-container-low": "#f3f4f5",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
+<div class="text-xl font-extrabold tracking-tighter text-blue-700 font-headline">CodeAtelier AI</div>
+<div class="hidden md:flex items-center space-x-8 font-plus-jakarta-sans text-sm font-medium tracking-tight">
+<a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1 transition-transform duration-150 scale-95" href="#">Home</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors" href="#">Curriculum</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors" href="#">Reviews</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100/50 rounded-lg transition-all">Login</button>
+<button class="px-5 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-all active:scale-95">Start Inquiry</button>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+<img alt="Development Future" class="w-full h-full object-cover" data-alt="Modern dark coding environment with glowing blue syntax highlighting on multiple high-resolution monitors in a sleek minimalist office workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoICECFtVCNLu24A0Iin9VCOIPttNfmUDSRw7MUp5Fb59u-OMYUZMAEIFg1U6Qylogq2YzzgcZflqusgpkaK2mtb1d3MQb8sT0LnpkSuHn3D3ZX6EmdhZ7hu6p7DfXsOX2qyhO5QbsJEUtxxcFdEAtIf_Evx2bpuS3JLRqdLNXFKNGyVknu8zp6UAVoLdgkUclwiN_-l1nK4QJvvpOIs73OsVAKXOEZR1WgNLBA1R9BpYq7AW65m62hbVccx_58VJEO9WPH_OAcEBE"/>
+</div>
+<div class="container max-w-7xl mx-auto px-6 relative z-20">
+<div class="max-w-3xl">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary-fixed/30 text-primary mb-6">
+<span class="font-label text-xs tracking-wider uppercase">Next-Gen Education</span>
+<div class="w-1 h-1 rounded-full bg-primary"></div>
+<span class="font-label text-xs tracking-wider uppercase">AI Powered</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8">
+                        AI와 함께하는<br/>
+                        개발의 미래, <span class="text-primary">CodeAtelier</span>에서<br/>
+                        시작하세요
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+                        최신 AI 도구를 활용한 실무 중심의 커리큘럼으로 당신의 개발 역량을 혁신합니다. 단순한 코딩을 넘어, 지능형 어시스턴트와 협업하는 차세대 개발자로 성장하세요.
+                    </p>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<button class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 active:translate-y-0">
+                            교육 과정 둘러보기
+                        </button>
+<button class="px-8 py-4 bg-surface-container-highest text-on-surface rounded-full text-lg font-bold transition-all hover:bg-surface-variant flex items-center justify-center group">
+                            상담 신청하기
+                            <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Floating Code Fragment Decor -->
+<div class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 w-96 transform rotate-3">
+<div class="bg-inverse-surface rounded-lg p-6 shadow-2xl border border-primary/20 backdrop-blur-sm">
+<div class="flex space-x-1.5 mb-4">
+<div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-amber-500/50"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-500/50"></div>
+</div>
+<div class="font-label text-sm text-primary-fixed-dim leading-relaxed">
+<span class="text-secondary-fixed-dim">// AI Assistant Prompt</span><br/>
+<span class="text-pink-400">const</span> atelier = <span class="text-amber-200">new</span> CodeAtelier({<br/>
+                          mode: <span class="text-emerald-400">'next-gen'</span>,<br/>
+                          tools: [<span class="text-emerald-400">'Copilot'</span>, <span class="text-emerald-400">'GPT-4'</span>],<br/>
+                          focus: <span class="text-emerald-400">'creative_coding'</span><br/>
+                        });<br/><br/>
+                        atelier.accelerate(<span class="text-primary-fixed">your_career</span>);
+                    </div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="container max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-on-surface mb-4">왜 CodeAtelier AI인가요?</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            우리는 기술의 정밀함과 인간의 창의성이 만나는 지점을 교육합니다. 차세대 AI 도구들은 단순한 도구가 아닌, 당신의 잠재력을 폭발시킬 촉매제입니다.
+                        </p>
+</div>
+<div class="hidden md:block pb-2">
+<div class="w-24 h-1 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:shadow-[0_20px_40px_-10px_rgba(25,28,29,0.06)] group">
+<div class="w-14 h-14 bg-primary-fixed-dim/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-4">실무 중심</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            이론에만 그치지 않습니다. 실제 기업의 협업 환경과 프로젝트를 그대로 재현하여 현업에서 즉시 사용 가능한 기술을 습득합니다.
+                        </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:shadow-[0_20px_40px_-10px_rgba(25,28,29,0.06)] group">
+<div class="w-14 h-14 bg-primary-fixed-dim/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-4">최신 AI 도구 활용</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            GitHub Copilot, Cursor 등 최첨단 AI 코딩 어시스턴트를 프로젝트의 모든 단계에 통합하여 생산성을 300% 이상 향상시키는 법을 배웁니다.
+                        </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:shadow-[0_20px_40px_-10px_rgba(25,28,29,0.06)] group">
+<div class="w-14 h-14 bg-primary-fixed-dim/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-4">전문가 멘토링</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            대형 테크 기업 출신의 시니어 개발자들이 1:1로 당신의 코드를 리뷰하고 AI와 효율적으로 대화하는 프롬프트 엔지니어링 노하우를 전수합니다.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary z-0">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary-container/40 via-transparent to-transparent"></div>
+</div>
+<div class="container max-w-5xl mx-auto px-6 relative z-10 text-center text-white">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">당신의 코딩 커리어에<br/>AI의 날개를 다세요</h2>
+<p class="text-on-primary-container text-lg md:text-xl mb-12 max-w-2xl mx-auto opacity-90">
+                    지금 등록하고 AI 네이티브 개발자로 도약할 수 있는 가장 빠른 경로를 확인하세요. 1기 특별 혜택이 곧 종료됩니다.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<button class="w-full sm:w-auto px-12 py-5 bg-white text-primary rounded-full text-xl font-bold shadow-2xl hover:bg-surface-bright transition-all active:scale-95">
+                        지금 커리큘럼 확인하기
+                    </button>
+<a class="text-white font-label text-sm border-b border-white/30 pb-1 hover:border-white transition-all" href="#">
+                        무료 맛보기 강의 시청하기
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 mt-auto bg-slate-50">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-slate-900 font-headline mb-4">CodeAtelier AI</div>
+<p class="font-inter text-xs text-slate-500 leading-relaxed max-w-xs">
+                    Technical Precision Meets Human Creativity.<br/>
+                    AI 시대의 새로운 교육 표준을 제시합니다.
+                </p>
+</div>
+<div>
+<h4 class="font-headline text-sm font-bold text-slate-900 mb-4">Company</h4>
+<div class="flex flex-col space-y-2">
+<a class="font-inter text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">About Us</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Careers</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">AI Ethics</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline text-sm font-bold text-slate-900 mb-4">Support</h4>
+<div class="flex flex-col space-y-2">
+<a class="font-inter text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Terms of Service</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Business Inquiry</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline text-sm font-bold text-slate-900 mb-4">Newsletter</h4>
+<div class="flex items-center bg-white rounded-lg p-1 shadow-sm">
+<input class="bg-transparent border-none focus:ring-0 text-xs flex-1 px-2" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-2 rounded-md hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200">
+<p class="font-inter text-xs text-slate-500 text-center">
+                © 2024 CodeAtelier AI. Technical Precision Meets Human Creativity.
+            </p>
+</div>
+</footer>
+</body></html>
