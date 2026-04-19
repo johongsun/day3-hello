@@ -1,0 +1,13 @@
+{
+  "name": "ai-code-assistance-landing",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.0",
+    "http-server": "^14.1.1",
+    "typescript": "^5.8.3"
+  }
+}
