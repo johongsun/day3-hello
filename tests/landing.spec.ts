@@ -43,3 +43,45 @@ test('성과 카드와 FAQ 핵심 항목이 노출되어야 한다', async ({ pa
 
   await expect(page.locator('#faq details')).toHaveCount(4);
 });
+
+test('필수 입력 누락 시 인라인 오류가 표시되어야 한다', async ({ page }) => {
+  await page.goto('/#apply');
+
+  await page.getByRole('button', { name: '설명회 신청 제출하기' }).click();
+
+  await expect(page.locator('[data-error-for="name"]')).toHaveText('이름은 필수입니다.');
+  await expect(page.locator('[data-error-for="phone"]')).toHaveText('연락처는 필수입니다.');
+  await expect(page.locator('[data-error-for="email"]')).toHaveText('이메일은 필수입니다.');
+});
+
+test('유효한 입력이면 성공 메시지를 표시해야 한다', async ({ page }) => {
+  await page.goto('/#apply');
+
+  await page.getByLabel('이름').fill('김민수');
+  await page.getByLabel('연락처').fill('010-1234-5678');
+  await page.getByLabel('이메일').fill('minsu@example.com');
+  await page.getByRole('button', { name: '설명회 신청 제출하기' }).click();
+
+  await expect(page.locator('#form-status')).toHaveText(
+    '신청이 완료되었습니다. 문자/이메일로 안내드리겠습니다.'
+  );
+});
+
+test('실패 후 다시 시도하기로 재제출할 수 있어야 한다', async ({ page }) => {
+  await page.goto('/#apply');
+
+  await page.getByLabel('이름').fill('이정희');
+  await page.getByLabel('연락처').fill('010-9999-2222');
+  await page.getByLabel('이메일').fill('fail@example.com');
+  await page.getByRole('button', { name: '설명회 신청 제출하기' }).click();
+
+  await expect(page.locator('#form-status')).toHaveText('제출에 실패했습니다. 다시 시도해 주세요.');
+  await expect(page.getByRole('button', { name: '다시 시도하기' })).toBeVisible();
+
+  await page.getByLabel('이메일').fill('retry@example.com');
+  await page.getByRole('button', { name: '다시 시도하기' }).click();
+
+  await expect(page.locator('#form-status')).toHaveText(
+    '신청이 완료되었습니다. 문자/이메일로 안내드리겠습니다.'
+  );
+});
