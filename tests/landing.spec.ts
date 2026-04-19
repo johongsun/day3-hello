@@ -85,3 +85,19 @@ test('실패 후 다시 시도하기로 재제출할 수 있어야 한다', asyn
     '신청이 완료되었습니다. 문자/이메일로 안내드리겠습니다.'
   );
 });
+
+test('모바일에서 CTA 터치 영역과 카드 세로 배치가 유지되어야 한다', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+
+  const cta = page.locator('a[href="#apply"]', { hasText: '설명회 신청하기' }).first();
+  await expect(cta).toHaveCSS('min-height', '48px');
+
+  const cards = page.locator('[data-test="case-card"]');
+  const first = await cards.nth(0).boundingBox();
+  const second = await cards.nth(1).boundingBox();
+
+  expect(first).not.toBeNull();
+  expect(second).not.toBeNull();
+  expect(second.y).toBeGreaterThan(first.y + first.height - 1);
+});
